@@ -1,16 +1,34 @@
-import React from 'react';
-import '../styles/_styles.scss';
+import React, {Component} from 'react';
+// import '../styles/_styles.scss';
 //import logo from './logo.svg';
 
-const Dashboard = () => (
-    <div>
-        <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <p>
-            Skinalysis
-            </p>
-        </header>
-    </div>
-);
+export default class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: this.props.name
+        }
+    }
 
-export default Dashboard;
+    //1st parameter : new props
+    //2nd parameter : current state 
+    static getDerivedStateFromProps(props, state) {
+        console.log(props);
+        console.log(state);
+        if (props.name !== state.name){
+            props.testFunction("changed");
+            return {
+                name: props.name,
+            };        
+        }
+        return null;
+    }
+  
+    render() {
+        return (
+            <div>
+                <p>PP</p>
+            </div>
+        )
+    }
+  }

@@ -1,13 +1,40 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import React from 'react';
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
 
 // want to render on each page
-const Nav = () => (
-    <header>
-        <h1>Navigation</h1>
-        <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-        <NavLink to="/analyze" activeClassName="is-active" exact={true}>Analyze</NavLink>
-    </header>
-);
+export default class Navigation extends Component {
+    constructor() {
+        super();
+        this.state = {
+            activeItem: "dashboard",
+            currentView: "dashboard"
+        }
+    }
 
-export default Nav;
+    handleItemClick = (e, { name }) => { 
+        this.props.updateCurrentView(name);
+        this.setState({ activeItem: name });
+    }
+  
+    render() {
+      const { activeItem } = this.state
+        
+      return (
+        <div>
+            <Menu pointing vertical>
+            <Menu.Item
+                name='dashboard'
+                active={activeItem === 'dashboard'}
+                onClick={this.handleItemClick}
+            />
+            <Menu.Item
+                name='analyze'
+                active={activeItem === 'analyze'}
+                onClick={this.handleItemClick}
+            />
+            </Menu>
+        </div>
+      )
+    }
+  }
