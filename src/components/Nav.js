@@ -21,20 +21,18 @@ export default class Navigation extends Component {
       const { activeItem } = this.state
         
       return (
-        <div>
-            <Menu pointing vertical>
-            <Menu.Item
-                name='landing'
-                active={activeItem === 'landing'}
-                onClick={this.handleItemClick}
-            />
-            <Menu.Item
-                name='analyze'
-                active={activeItem === 'analyze'}
-                onClick={this.handleItemClick}
-            />
-            </Menu>
-        </div>
+            <div>
+                <Menu.Item
+                    name='landing'
+                    active={activeItem === 'landing'}
+                    onClick={this.handleItemClick}
+                />
+                <Menu.Item
+                    name='analyze'
+                    active={activeItem === 'analyze'}
+                    onClick={this.handleItemClick}
+                />
+            </div>
       )
     }
   }

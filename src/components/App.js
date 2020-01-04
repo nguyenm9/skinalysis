@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Menu, Sidebar, Segment, Button } from 'semantic-ui-react';
 import Landing from './Landing';
 import Nav from './Nav';
 import Analyze from './Analyze';
@@ -9,7 +9,8 @@ export default class MainContainer extends Component {
     constructor() {
         super();
         this.state = {
-            currentView: "landing"
+            currentView: "landing",
+            visible: false
         }
     }
 
@@ -17,22 +18,37 @@ export default class MainContainer extends Component {
         this.setState({ currentView: name });
     }
 
+    toggleMenu = () => {
+        this.setState({visible: !this.state.visible});
+    }
+
     render() {
         return (
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={4}>
-                        <Nav updateCurrentView={this.updateCurrentView} />
-                    </Grid.Column>
-                    <Grid.Column width={10}>
-                        { this.state.currentView === "landing" ? (
-                            <Landing/>
-                        ):(
-                            <Analyze/>
-                        )}
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+                <div style={{width: '1000px', height: '900px', textAlign: 'center'}}>
+                    <Sidebar.Pushable>
+                        <Sidebar
+                            as={Menu}
+                            animation='push'
+                            icon='labeled'
+                            inverted
+                            vertical
+                            visible={this.state.visible}
+                            width='thin'
+                        >
+                            <Nav updateCurrentView={this.updateCurrentView} />
+                        </Sidebar>
+                        <Sidebar.Pusher>
+                            <Button basic onClick={this.toggleMenu}>Toggle</Button>
+                            <Segment basic>
+                                { this.state.currentView === "landing" ? (
+                                    <Landing/>
+                                ):(
+                                    <Analyze/>
+                                )}
+                            </Segment>
+                        </Sidebar.Pusher>
+                    </Sidebar.Pushable>
+                </div>
         )
     }
   }
