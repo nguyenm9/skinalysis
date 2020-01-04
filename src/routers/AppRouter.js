@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import React from 'react';
-import MainContainer from '../components/MainContainer';
+import App from '../components/App';
 
 
 const AppRouter = () => (
     <div>
-        <MainContainer/>
+        <App/>
     </div>
 );
 

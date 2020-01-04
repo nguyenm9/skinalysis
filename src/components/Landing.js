@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 // import '../styles/_styles.scss';
 //import logo from './logo.svg';
 
-export default class Dashboard extends Component {
+export default class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {

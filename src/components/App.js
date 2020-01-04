@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Grid } from 'semantic-ui-react';
-import Dashboard from './Dashboard';
+import Landing from './Landing';
 import Nav from './Nav';
 import Analyze from './Analyze';
 import Header from './Header';
@@ -9,7 +9,7 @@ export default class MainContainer extends Component {
     constructor() {
         super();
         this.state = {
-            currentView: "dashboard"
+            currentView: "landing"
         }
     }
 
@@ -25,8 +25,8 @@ export default class MainContainer extends Component {
                         <Nav updateCurrentView={this.updateCurrentView} />
                     </Grid.Column>
                     <Grid.Column width={10}>
-                        { this.state.currentView === "dashboard" ? (
-                            <Dashboard/>
+                        { this.state.currentView === "landing" ? (
+                            <Landing/>
                         ):(
                             <Analyze/>
                         )}
