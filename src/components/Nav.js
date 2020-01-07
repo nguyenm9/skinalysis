@@ -7,8 +7,8 @@ export default class Navigation extends Component {
     constructor() {
         super();
         this.state = {
-            activeItem: "landing",
-            currentView: "landing"
+            activeItem: "home",
+            currentView: "home"
         }
     }
 
@@ -23,8 +23,8 @@ export default class Navigation extends Component {
       return (
             <div>
                 <Menu.Item
-                    name='landing'
-                    active={activeItem === 'landing'}
+                    name='home'
+                    active={activeItem === 'home'}
                     onClick={this.handleItemClick}
                 />
                 <Menu.Item

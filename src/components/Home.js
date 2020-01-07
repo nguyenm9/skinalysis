@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 // import '../styles/_styles.scss';
 //import logo from './logo.svg';
 
-export default class Landing extends Component {
+export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,8 +13,6 @@ export default class Landing extends Component {
     //1st parameter : new props
     //2nd parameter : current state 
     static getDerivedStateFromProps(props, state) {
-        console.log(props);
-        console.log(state);
         if (props.name !== state.name){
             props.testFunction("changed");
             return {

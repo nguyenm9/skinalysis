@@ -1,2 +1,5 @@
-@import './base/settings';
 @import './base/base';
+@import './base/index';
+@import './base/variables';
+@import './components/app';
+@import './components/topHeader';
