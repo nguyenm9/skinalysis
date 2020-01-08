@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Nav from './components/Nav';
 import Analyze from './components/Analyze';
 import TopHeader from './components/TopHeader';
+import InnerComponent from './components/InnerComponent';
 
 export default class MainContainer extends Component {
     // constructor() {
@@ -21,9 +22,7 @@ export default class MainContainer extends Component {
         return (
             <div>
                 <TopHeader/>
-                <div className="app-layout">
-                    hello
-                </div>
+                <InnerComponent/>
             </div>
 
             
