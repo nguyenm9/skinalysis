@@ -10,7 +10,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+    -moz-box-shadow: 0 0 5px #d3d3d3 ;
+    -webkit-box-shadow: 0 0 5px#d3d3d3 ;
+    box-shadow: 0 0 5px #d3d3d3 ;
 }
   
 .App-logo {

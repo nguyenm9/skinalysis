@@ -3,11 +3,8 @@ import { Header } from 'semantic-ui-react';
 
 const TopHeader = () => (
     <div className='top-header'>
-      <Header size='huge' textAlign='centered'>
-        SKINALYSIS
-      </Header>
+      Skinalysis
     </div>
-    
 );
 
 export default TopHeader;
