@@ -22,7 +22,7 @@ export default class Navigation extends Component {
         
       return (
             <div>
-                <Menu>
+                <Menu compact>
                     <Menu.Item as={ Link }
                         name='home'
                         to='home'
