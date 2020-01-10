@@ -11,8 +11,10 @@ export default class MainContainer extends Component {
                 <div>
                     <Router>
                         <Nav/>
-                        <Route exact path="/home" component={Home}/>
-                        <Route exact path="/analyze" component={Analyze}/>
+                        <div className="app-content">
+                            <Route exact path="/home" component={Home}/>
+                            <Route exact path="/analyze" component={Analyze}/>
+                        </div>
                     </Router>
                 </div>
             </div>
