@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Segment } from 'semantic-ui-react';
+import { Container, Header, Segment, Label, Rating, Placeholder, Card } from 'semantic-ui-react';
 
 export default class Home extends Component {
     render () {
@@ -31,7 +31,15 @@ export default class Home extends Component {
 
                     <Header as="H3">Sample</Header>
                     <Segment.Group>
-                        <Segment>Image Here</Segment>
+                        <Segment.Group>
+                        <Card style={{ width: 200, height: 200 }}>
+                            <Card.Content>
+                                <Placeholder>
+                                <Placeholder.Image square />
+                                </Placeholder>
+                            </Card.Content>
+                        </Card>
+                        </Segment.Group>
                         <Segment.Group>
                             <Segment>Product Name: </Segment>
                             <Segment>Description: </Segment>
@@ -39,9 +47,13 @@ export default class Home extends Component {
                         </Segment.Group>
                         <Segment.Group>
                             <Segment.Group horizontal>
-                                <Segment>Ingredient Name</Segment>
-                                <Segment>Flags</Segment>
-                                <Segment>Comedogenic Rating</Segment>
+                                <Segment>Ingredient</Segment>
+                                <Segment>
+                                    <Label color='red' horizontal>Flag</Label>
+                                </Segment>
+                                <Segment>
+                                    <Rating maxRating={5} defaultRating={3} icon='star' size='mini' />
+                                </Segment>
                             </Segment.Group>
                         </Segment.Group>
                         <Segment.Group>
@@ -49,9 +61,47 @@ export default class Home extends Component {
                         </Segment.Group>
                     </Segment.Group>
 
+                    <Segment.Group>
+                        <Segment.Group>
+                        <Card style={{ width: 200, height: 200 }}>
+                            <Card.Content>
+                                <Placeholder>
+                                <Placeholder.Image square />
+                                </Placeholder>
+                            </Card.Content>
+                        </Card>
+                        </Segment.Group>
+                        <Segment.Group>
+                            <Segment>Product Name: </Segment>
+                            <Segment>Description: </Segment>
+                            <Segment>Rating: </Segment>
+                        </Segment.Group>
+                        <Segment.Group>
+                            <Segment.Group horizontal>
+                                <Segment>Ingredient</Segment>
+                                <Segment>
+                                    <Label color='red' horizontal>Flag</Label>
+                                </Segment>
+                                <Segment>
+                                    <Rating maxRating={5} defaultRating={3} icon='star' size='mini' />
+                                </Segment>
+                            </Segment.Group>
+                        </Segment.Group>
+                        <Segment.Group>
+                            <Segment>Research Articles</Segment>
+                        </Segment.Group>
+                    </Segment.Group>
 
                     <Segment.Group>
-                        <Segment>Image Here</Segment>
+                        <Segment.Group>
+                        <Card style={{ width: 200, height: 200 }}>
+                            <Card.Content>
+                                <Placeholder>
+                                <Placeholder.Image square />
+                                </Placeholder>
+                            </Card.Content>
+                        </Card>
+                        </Segment.Group>
                         <Segment.Group>
                             <Segment>Product Name: </Segment>
                             <Segment>Description: </Segment>
@@ -59,43 +109,13 @@ export default class Home extends Component {
                         </Segment.Group>
                         <Segment.Group>
                             <Segment.Group horizontal>
-                                <Segment>Ingredient Name</Segment>
-                                <Segment>Flags</Segment>
-                                <Segment>Comedogenic Rating</Segment>
-                            </Segment.Group>
-                        </Segment.Group>
-                        <Segment.Group>
-                            <Segment>Research Articles</Segment>
-                        </Segment.Group>
-                    </Segment.Group><Segment.Group>
-                        <Segment>Image Here</Segment>
-                        <Segment.Group>
-                            <Segment>Product Name: </Segment>
-                            <Segment>Description: </Segment>
-                            <Segment>Rating: </Segment>
-                        </Segment.Group>
-                        <Segment.Group>
-                            <Segment.Group horizontal>
-                                <Segment>Ingredient Name</Segment>
-                                <Segment>Flags</Segment>
-                                <Segment>Comedogenic Rating</Segment>
-                            </Segment.Group>
-                        </Segment.Group>
-                        <Segment.Group>
-                            <Segment>Research Articles</Segment>
-                        </Segment.Group>
-                    </Segment.Group><Segment.Group>
-                        <Segment>Image Here</Segment>
-                        <Segment.Group>
-                            <Segment>Product Name: </Segment>
-                            <Segment>Description: </Segment>
-                            <Segment>Rating: </Segment>
-                        </Segment.Group>
-                        <Segment.Group>
-                            <Segment.Group horizontal>
-                                <Segment>Ingredient Name</Segment>
-                                <Segment>Flags</Segment>
-                                <Segment>Comedogenic Rating</Segment>
+                                <Segment>Ingredient</Segment>
+                                <Segment>
+                                    <Label color='red' horizontal>Flag</Label>
+                                </Segment>
+                                <Segment>
+                                    <Rating maxRating={5} defaultRating={3} icon='star' size='mini' />
+                                </Segment>
                             </Segment.Group>
                         </Segment.Group>
                         <Segment.Group>
