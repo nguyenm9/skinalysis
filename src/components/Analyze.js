@@ -4,7 +4,7 @@ import { Container, Header, TextArea, Segment, Form } from 'semantic-ui-react';
 export default class Analyze extends Component {
     render () {
         return (
-            <div>
+            <div class="analyze-content">
                 <Container fluid>
                     <Header as='H2' attached='top' center>
                         Analyze Product
@@ -18,4 +18,4 @@ export default class Analyze extends Component {
             </div>
         )
     }
-}
+}  
