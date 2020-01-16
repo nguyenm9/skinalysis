@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import Nav from "./Nav";
 import Home from "./Home";
 import Analyze from "./Analyze";
+import Results from "./Results";
 
 export default class MainContainer extends Component {
     render() {
@@ -15,6 +16,7 @@ export default class MainContainer extends Component {
                             <Redirect exact from="/" to="/home" component={Home}/>
                             <Route exact path="/home" component={Home}/>
                             <Route exact path="/analyze" component={Analyze}/>
+                            <Route exact path="/results" component={Results}/>
                         </div>
                     </Router>
                 </div>

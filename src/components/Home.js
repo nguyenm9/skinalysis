@@ -29,7 +29,7 @@ export default class Home extends Component {
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
 
-                    <Header as="H3">Sample</Header>
+                    <Header as="h3">Sample</Header>
                     <Segment.Group>
                         <Segment.Group>
                         <Card style={{ width: 200, height: 200 }}>

@@ -11,7 +11,9 @@ export default class Analyze extends Component {
                     </Header>
                     <Segment attached>
                         <Form>
-                            <TextArea rows={8} placeholder='Enter ingredients here...'/>
+                            <TextArea rows={20} 
+                                placeholder='Enter ingredients here...'
+                            />
                         </Form>
                     </Segment>
                 </Container>
