@@ -24,7 +24,7 @@ export default class Ingredients extends Component {
     render () {
         return (
             <div>
-                This is from Ingredients component.
+                This is from Ingredients component!
                 <ul>
                     <li>{this.state.ingredientsData.name}</li>
                 </ul>
