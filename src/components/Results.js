@@ -5,6 +5,7 @@ import Ingredients from './Ingredients';
 const Results = () => (
     <div>
         This is from Results component.
+        <Ingredients/>
     </div>
 );
 

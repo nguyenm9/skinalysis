@@ -12,6 +12,19 @@
     -moz-box-shadow: 0 0 5px #d3d3d3 ;
     -webkit-box-shadow: 0 0 5px#d3d3d3 ;
     box-shadow: 0 0 5px #d3d3d3 ;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 85%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
   
 .App-logo {
