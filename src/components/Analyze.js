@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Container, Header, Segment, Form } from 'semantic-ui-react';
 import axios from 'axios';
 
@@ -21,6 +22,8 @@ export default class Analyze extends Component {
         
         const { userInputIngredients } = this.state;
         console.log(userInputIngredients);
+
+        this.props.history.push('/results');
         // axios.post('/', {userInputIngredients})
         //     .then((result) => {
         //         // access results
