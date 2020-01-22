@@ -15,10 +15,6 @@ export default class Navigation extends Component {
                         name='analyze'
                         to='analyze'
                     />
-                    <Menu.Item as={ Link }
-                        name='results'
-                        to='results'
-                    />
                 </Menu>
             </div>
       )

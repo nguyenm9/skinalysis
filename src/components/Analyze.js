@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Container, Header, Segment, Form } from 'semantic-ui-react';
 import axios from 'axios';
+import Results from './Results';
 
 export default class Analyze extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            userInputIngredients: '',
+            userInputIngredients: ''
         };
         this.onSubmit = this.onSubmit.bind(this);
     }
@@ -58,6 +59,7 @@ export default class Analyze extends Component {
                         <p>
                             {this.state.userInputIngredients}
                         </p>
+                        <Results/>
                     </Segment>
                 </Container>
             </div>

@@ -10,7 +10,7 @@ export default class MainContainer extends Component {
         return (
             <div className="app-layout">
                 <div>
-                    <Router history={history}>
+                    <Router>
                         <Nav/>
                         <div className="app-content">
                             <Redirect exact from="/" to="/home" component={Home}/>
