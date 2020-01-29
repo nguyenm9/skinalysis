@@ -23,7 +23,7 @@ export default class Analyze extends Component {
         
         const { userInputIngredients } = this.state;
         console.log(userInputIngredients);
-
+        console.log(this.props);
         this.props.history.push('/results');
         // axios.post('/', {userInputIngredients})
         //     .then((result) => {
