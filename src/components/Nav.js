@@ -6,7 +6,7 @@ export default class Navigation extends Component {
     render() {
       return (
             <div>
-                <Menu>
+                <Menu compact>
                     <Menu.Item as={ Link }
                         name='home'
                         to='home'
