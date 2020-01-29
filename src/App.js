@@ -4,7 +4,6 @@ import InnerComponent from './components/InnerComponent';
 
 export default class MainContainer extends Component {
     render() {
-        const pp = "pp";
         return (
             <div>
                 <TopHeader/>

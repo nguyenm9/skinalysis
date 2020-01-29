@@ -13,7 +13,9 @@ export default class Ingredients extends Component {
 
     componentDidMount = () => {
         console.log("here in ingredients: " + this.state.userInputIngredients)
-        axios.get('https://public.opendatasoft.com/api/records/1.0/search/?dataset=cosmetic-ingredient-database-ingredients-and-fragrance-inventory&sort=update_date&facet=update_date&facet=function&facet=inci_name&facet=chem_iupac_name_description').then((res) => {
+        //Grabbing userInputIngredients and substituing it in the query 
+        const ingredientQuery = this.state.userInputIngredients
+        axios.get(`https://public.opendatasoft.com/api/records/1.0/search/?dataset=cosmetic-ingredient-database-ingredients-and-fragrance-inventory&q=${ingredientQuery}&facet=update_date&facet=restriction&facet=function`).then((res) => {
             this.setState({ 
                 ingredientsData: res.data
             });

@@ -22,9 +22,11 @@ export default class Analyze extends Component {
         event.preventDefault();
         
         const { userInputIngredients } = this.state;
-        console.log(userInputIngredients);
-        console.log(this.props);
-        this.props.history.push('/results');
+        //Passing the prop userInputIngredients when navigation to result page 
+        this.props.history.push({
+            pathname: '/results', 
+            state: { userInputIngredients: userInputIngredients}   
+        });
         // axios.post('/', {userInputIngredients})
         //     .then((result) => {
         //         // access results
